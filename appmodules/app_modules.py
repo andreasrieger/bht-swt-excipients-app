@@ -1,8 +1,8 @@
 class AppModules:
     app_modules_list = []
 
-    def __init__(self):
-        self.app_modules_list = self.app_modules_list
+    def __init__(self, app_modules_list):
+        self.app_modules_list = app_modules_list
 
     def add_app_module(self, app_module):
         self.app_modules_list.append(app_module)
@@ -15,6 +15,9 @@ class AppModules:
                 return True
         return False
 
+    # Method to remove an app module from the list
+    # Raises an exception if module is not in list
+    # String app_module_name: App module name to be removed
     def remove_app_module(self, app_module_name):
         return self.app_modules_list.remove(app_module_name)
 
